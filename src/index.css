@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+select:-internal-list-box option:checked {
+    /* @apply bg-indigo-50;
+    @apply rounded-sm;
+    @apply p-2; */
+    padding: 0.5rem;
+    background-color: red;
+}
+
+select:-internal-list-box option {
+    margin: 1rem;
+}
+
+.table-auto {
+    @apply table-fixed;
+}
+
+th,
+td {
+    @apply px-4 py-2;
+}
+
+.spinner {
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

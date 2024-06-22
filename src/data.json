@@ -1,0 +1,103 @@
+{
+  "companies": [
+    {
+      "id": "1",
+      "companyName": "ABC Corporation",
+      "dateOfRegistration": "2020-01-01",
+      "companyRegistrationNumber": "REG-123456",
+      "address": "123 Main St, Anytown, USA",
+      "contactPerson": "John Doe",
+      "listOfDepartments": [
+        "Sales",
+        "Marketing",
+        "IT"
+      ],
+      "contactPhone": "555-1234",
+      "emailAddress": "johndoe@abccorp.com"
+    },
+    {
+      "id": "2",
+      "companyName": "XYZ Inc.",
+      "dateOfRegistration": "2018-06-01",
+      "companyRegistrationNumber": "REG-789012",
+      "address": "456 Elm St, Othertown, USA",
+      "contactPerson": "Jane Smith",
+      "listOfDepartments": [
+        "HR",
+        "Finance",
+        "Operations"
+      ],
+      "contactPhone": "555-5678",
+      "emailAddress": "janesmith@xyzinc.com"
+    },
+    {
+      "id": "3",
+      "companyName": " DEF Enterprises",
+      "dateOfRegistration": "2015-03-01",
+      "companyRegistrationNumber": "REG-345678",
+      "address": "789 Oak St, Thistown, USA",
+      "contactPerson": "Bob Johnson",
+      "listOfDepartments": [
+        "R&D",
+        "Sales",
+        "Customer Service"
+      ],
+      "contactPhone": "555-9012",
+      "emailAddress": "bobjohnson@defenterprises.com"
+    },
+    {
+      "id": "24c7",
+      "companyName": "Ronald Yakuza",
+      "dateOfRegistration": "2024-06-07",
+      "companyRegistrationNumber": "REG-345f",
+      "address": "qwety",
+      "contactPerson": "John Doe",
+      "listOfDepartments": [
+        "Marketing",
+        "HR"
+      ],
+      "contactPhone": "0786204592",
+      "emailAddress": "ronaldchingambare2@gmail.com"
+    },
+    {
+      "id": "1b7f",
+      "companyName": "Khedhira",
+      "dateOfRegistration": "2024-06-14",
+      "companyRegistrationNumber": "REG-3453",
+      "address": "Chadcom",
+      "contactPerson": "Anmore Tozo",
+      "listOfDepartments": [
+        "IT",
+        "Finance",
+        "Sales"
+      ],
+      "contactPhone": "0786204592",
+      "emailAddress": "ronaldchingambare2@gmail.com"
+    },
+    {
+      "id": "3aef",
+      "companyName": "Slippery",
+      "dateOfRegistration": "2024-06-13",
+      "companyRegistrationNumber": "REG-3453",
+      "address": "takeoff",
+      "contactPerson": "John Doe",
+      "listOfDepartments": [
+        "HR",
+        "IT",
+        "Finance"
+      ],
+      "contactPhone": "0786204592",
+      "emailAddress": "emily@email.com"
+    }
+  ],
+  "employees": [
+    {
+      "id": "d1c3",
+      "Name": "Ronald Yak",
+      "email": "em@email.com",
+      "role": "hey",
+      "department": "Marketing",
+      "companyID": "1"
+    }
+  ]
+}
