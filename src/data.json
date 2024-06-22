@@ -98,6 +98,22 @@
       "role": "hey",
       "department": "Marketing",
       "companyID": "1"
+    },
+    {
+      "id": "b350",
+      "Name": "Miranda",
+      "email": "kg@gmail.com",
+      "role": "Chikwata",
+      "department": "Marketing",
+      "companyID": "24c7"
+    },
+    {
+      "id": "2b52",
+      "Name": "Mimi",
+      "email": "choper@email.com",
+      "role": "Buy Drugs",
+      "department": "Marketing",
+      "companyID": "24c7"
     }
   ]
 }

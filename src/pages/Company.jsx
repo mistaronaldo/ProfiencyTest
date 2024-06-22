@@ -34,10 +34,15 @@ const Company = () => {
         const fetchCompanies = async () => {
 
             try {
-                const res = await fetch('/api/employees')
+                const res = await fetch('/api/employees/')
                 const data = await res.json();
-                setRawEmployees(data);
-                setEmployees(data);
+                const companysEmployees = data.filter((item) => {
+                    const searchString = `${item.companyID} `;
+                    return searchString.toLowerCase().includes(id);
+                });
+
+                setRawEmployees(companysEmployees);
+                setEmployees(companysEmployees);
             } catch (error) {
                 console.log('Error fetching data', error);
             } finally {

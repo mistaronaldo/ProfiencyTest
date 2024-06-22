@@ -1,11 +1,14 @@
 
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Routes } from 'react-router-dom'
 import MainLayout from './layout/MainLayout';
 
 import Home from './pages/Home';
 import AddCompany from './pages/AddCompany.jsx';
 import AddEmployee from './pages/AddEmployee.jsx';
 import Company from './pages/Company.jsx';
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
+
 
 
 
@@ -35,13 +38,18 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path='/add-company' element={<AddCompany AddNewCompany={addNewCompany} />} />
-        <Route path='/company/:id' element={<Company />} />
-        <Route path='/add-employee/:id' element={<AddEmployee addNewEmployee={addNewEmployee} />} />
-        {/* <Route path='*' element={<NotFound />} /> */}
-      </Route>
+      <>
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/' element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path='/add-company' element={<AddCompany AddNewCompany={addNewCompany} />} />
+          <Route path='/company/:id' element={<Company />} />
+          <Route path='/add-employee/:id' element={<AddEmployee addNewEmployee={addNewEmployee} />} />
+          {/* <Route path='*' element={<NotFound />} /> */}
+        </Route>
+      </>
+
     )
 
   );

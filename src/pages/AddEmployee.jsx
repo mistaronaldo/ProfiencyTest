@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react'
+import { Reader } from 'react-csv-reader';
 
 const AddEmployee = ({ addNewEmployee }) => {
     const navigate = useNavigate();
@@ -10,8 +11,10 @@ const AddEmployee = ({ addNewEmployee }) => {
     const [role, setRole] = React.useState('');
     const [department, setDepartment] = React.useState('');
     const [departments, setDepartments] = React.useState([]);
+    const [bulkEmployees, setBulkEmployees] = React.useState([]);
     const [laoding, setLoading] = useState(true);
     const [company, setCompany] = useState({});
+    const [uploadedFile, setUploadedFile] = useState(null);
 
 
     useEffect(() => {
@@ -46,6 +49,12 @@ const AddEmployee = ({ addNewEmployee }) => {
 
         return navigate('/company/' + id);
     };
+
+
+
+
+
+
     return (
         <div className='container mx-auto p-4'>
             <form onSubmit={handleSubmit} className="mx-auto p-4 pt-6 pb-8 w-2/4 bg-white shadow-xl rounded-xl">
@@ -77,6 +86,15 @@ const AddEmployee = ({ addNewEmployee }) => {
                 </div>
 
             </form>
+            {/* <div className='mx-auto p-4 pt-6 pb-8 w-2/4 bg-white shadow-xl rounded-xl m-5'>
+                <h1 className='font-bold text-center'>Add Bulk</h1>
+                <div className='border rounded-lg p-4 w-48 m-auto my-4 text-center'>
+                    <input hidden type="file" id='bulkfile' onChange={(e) => handleFileChange(e)} accept=".csv" />
+                    <label htmlFor="bulkfile" className='text-center text-sm text-blue-700 hover:underline cursor-pointer'>Upload csv file</label>
+
+                </div>
+
+            </div> */}
 
         </div>
     )
