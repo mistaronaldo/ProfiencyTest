@@ -115,5 +115,32 @@
       "department": "Marketing",
       "companyID": "24c7"
     }
+  ],
+  "users": [
+    {
+      "id": "1489",
+      "name": "John Smith",
+      "email": "dope@email.com",
+      "password": "test1223"
+    },
+    {
+      "id": "b6ea",
+      "name": "Ronald C",
+      "email": "dope@email2.com",
+      "password": "test1223"
+    },
+    {
+      "id": "1f8e",
+      "name": "Dababy",
+      "email": "dboy@email.com",
+      "password": "12"
+    },
+    {
+      "id": "5b9c",
+      "name": "John Smith",
+      "email": "metro@email.com",
+      "password": "12",
+      "phone": "0715343263"
+    }
   ]
 }

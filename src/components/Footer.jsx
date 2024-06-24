@@ -11,13 +11,13 @@ const Footer = () => {
                     <div className="footer-right">
                         <ul className="flex items-center">
                             <li className="mx-4">
-                                <a className="text-sm text-gray-600 hover:text-gray-800" href="#">Link 1</a>
+                                <a className="text-sm text-gray-600 hover:text-gray-800" href="#">Contact Us</a>
                             </li>
                             <li className="mx-4">
-                                <a className="text-sm text-gray-600 hover:text-gray-800" href="#">Link 2</a>
+                                <a className="text-sm text-gray-600 hover:text-gray-800" href="#">About Us</a>
                             </li>
                             <li className="mx-4">
-                                <a className="text-sm text-gray-600 hover:text-gray-800" href="#">Link 3</a>
+                                <a className="text-sm text-gray-600 hover:text-gray-800" href="#">Whatsapp</a>
                             </li>
                         </ul>
                     </div>

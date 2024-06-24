@@ -1,35 +1,48 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(null);
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        // Simulate API call for registration (replace with your backend logic)
-        try {
-            const response = await fetch('/api/register', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, password }),
-            });
 
-            if (!response.ok) {
-                throw new Error('Registration failed');
+
+        try {
+            const res = await fetch(`/api/users/?email=${email}`)
+            const exists = await res.json();
+
+            if (!exists.length > 0) {
+
+                const response = await fetch('/api/users', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password, phone }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Registration failed');
+                }
+
+                const data = await response.json();
+                console.log('Registration successful:', data);
+
+                return navigate('/');
+            } else {
+                setErrorMessage('Email already exist');
             }
 
-            const data = await response.json();
-            console.log('Registration successful:', data); // Handle successful registration
-
-            // Redirect to login page or other page after successful registration
         } catch (error) {
             console.error('Registration error:', error);
-            setErrorMessage(error.message || 'Registration failed'); // Set error message
+            setErrorMessage(error.message || 'Registration failed');
         }
     };
 
@@ -47,6 +60,18 @@ const Register = () => {
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="phone" className="block text-gray-700 font-bold mb-2">
+                            Phone
+                        </label>
+                        <input
+                            id="phone"
+                            type="text"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                         />
                     </div>

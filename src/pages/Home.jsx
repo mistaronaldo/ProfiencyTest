@@ -1,8 +1,18 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+
+    // const loggedin = localStorage.getItem('LoggedIn')
+    // console.log(loggedin);
+    // const navigate = useNavigate();
+    // useEffect(() => {
+    //     if (loggedin) {
+    //         console.log('redirecting ');
+    //         return navigate('/login');
+    //     }
+    // }, [])
 
     const [searchQuery, setSearchQuery] = useState("");
     const [CompaniesRaw, setRawCompanies] = useState([]);
@@ -10,16 +20,20 @@ const Home = () => {
     const [laoding, setLoading] = useState(true);
     const [searching, setSearching] = useState(true);
     const [totalCompanies, setTotalCompanies] = useState(0);
+    const [totalEmployees, setTotalEmployees] = useState(0);
 
     useEffect(() => {
         const fetchCompanies = async () => {
 
             try {
                 const res = await fetch('/api/companies')
+                const emps = await fetch('/api/employees')
                 const data = await res.json();
+                const total = await emps.json();
                 setRawCompanies(data);
                 setCompanies(data);
                 setTotalCompanies(data.length)
+                setTotalEmployees(total.length)
             } catch (error) {
                 console.log('Error fetching data', error);
             } finally {
@@ -57,7 +71,7 @@ const Home = () => {
                         </div>
                         <div className='p-4 shadow-lg rounded-lg bg-indigo-50'>
                             <h1 className='leading-8'>Total Employees</h1>
-                            <h1 className='text-4xl font-bold text-gray-700 '>259</h1>
+                            <h1 className='text-4xl font-bold text-gray-700 '>{totalEmployees}</h1>
                         </div>
                     </div>
 
