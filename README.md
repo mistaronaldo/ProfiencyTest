@@ -1,6 +1,6 @@
 Hello 👋 ...
 
-*Welcome to [Talent Verify Project]!*
+*Welcome to Talent Verify Project!*
 
 This project is a solution presented by Ronald Chingambare.
 
