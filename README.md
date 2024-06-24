@@ -1,8 +1,21 @@
-# React + Vite
+Hello 👋 ...
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*Welcome to [Talent Verify Project]!*
 
-Currently, two official plugins are available:
+This project is a solution presented by Ronald Chingambare.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+To get started with the project, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/mistaronaldo/ProfiencyTest.git`
+2. Install dependencies: `npm install`
+3. Start the application: `npm run dev`
+3. Start the server: `npm run server`
+
+
+*Contact*
+
+If you have any questions or would like to discuss the project, please feel free to reach out to me at ronaldchingambare2@gmail.com or 0715343263.
+
